@@ -27,24 +27,13 @@ const tutorials = [
 // } 
 
 
-function titleCased(tutorial) {
-  tutorial.map(array => {
-    let newArray = array.split(" ")
-    for( let letter of newArray) {
-      console.log(letter)
-    }
-
-    
-       
-        
-
-        // for( let newLetter of letter) {
-        //   console.log(newLetter.charAt(2))
-        // }
-        // let x = letter.charAt(0).toUpperCase()
-        // return console.log(x)
-     })
+function titleCased() {
+  return tutorials.map(newArray => {
+    return newArray.split(" ").map(character => {
+      return character.replace(character[0], character[0].toUpperCase())
+    }).join(' ')
+    })
     
   }
 
-(titleCased(tutorials))
+console.log((titleCased()))
